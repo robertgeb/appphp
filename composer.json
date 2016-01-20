@@ -1,0 +1,12 @@
+{
+  "name": "Geb/appphp",
+  "require": {
+
+  },
+  "autoload": {
+    "psr-4":{
+      "appphp\\": ["app/lib", "app/model", "app/controller", "app/view"]
+    },
+    "files": ["app/config/config.php"]
+  }
+}
