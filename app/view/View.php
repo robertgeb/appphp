@@ -69,7 +69,7 @@
                             break;
                         // NOTE: Estrutura para video caso output for um video.
                         case 'video':
-                            $output['content'] = '<video controls preload="auto" src="'. Displayy\Router::getFullOrigin($_SERVER) . DS . 'stream" width="100%"></video>';
+                            $output['content'] = '<video controls preload="auto" src="'. NAMESPACE\Router::getFullOrigin($_SERVER) . DS . 'stream" width="100%"></video>';
                             break;
                         default:
                             $output['content'] = '-';

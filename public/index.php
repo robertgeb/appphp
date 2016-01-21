@@ -9,10 +9,10 @@
     $uri = (empty($_GET['uri']) || $_GET['uri'] ==='/') ? '/index' : $_GET['uri'];
 
     // TODO: Error log handing seemly
-    $erro = ''; // NOTE: Guarda as messagens de erro e passa para o Displayy\View
+    $erro = ''; // NOTE: Guarda as messagens de erro e passa para o View
 
     //  Cria Rotas
-    Displayy\Router::route("/(\w+)/?(\w+)?/?(\w+)?", function($model, $action = '', $argument = '')
+    NAMESPACE\Router::route("/(\w+)/?(\w+)?/?(\w+)?", function($model, $action = '', $argument = '')
     {
         $params = func_get_args();
         $modelName =  . ucwords(strtolower($params[0]));
@@ -47,7 +47,7 @@
     // Executa o Router para gerar a rota
 
     try {
-        Displayy\Router::execute($uri);
+        NAMESPACE\Router::execute($uri);
     } catch (\Exception $e) {
         echo $e->getMessage();
     }
